@@ -1,4 +1,4 @@
-import { DRAW_X, DRAW_O } from '../helpers/actionTypes'
+import { DRAW_X, DRAW_O, CLEAR_BOARD } from '../helpers/actionTypes'
 
 export function drawXAction(cellIndex) {
   return (dispatch) => {
@@ -22,5 +22,9 @@ export function drawOAction(cellIndex) {
       resolve()
     })
   }
+}
+
+export function clearBoard() {
+  return {type: CLEAR_BOARD}
 }
 

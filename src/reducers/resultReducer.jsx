@@ -1,4 +1,4 @@
-import { X_WINS, O_WINS, TIE } from '../helpers/actionTypes'
+import { X_WINS, O_WINS, TIE, CLEAR_RESULT } from '../helpers/actionTypes'
 
 const initialState = {
   win: null,
@@ -24,6 +24,9 @@ export function resultReducer(state = initialState, action) {
         win: null,
         tie: true
       }
+
+    case CLEAR_RESULT:
+      return initialState
 
     default:
       return state

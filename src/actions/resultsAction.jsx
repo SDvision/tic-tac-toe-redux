@@ -1,4 +1,4 @@
-import { X_WINS, O_WINS, TIE } from '../helpers/actionTypes'
+import { X_WINS, O_WINS, TIE, CLEAR_RESULT } from '../helpers/actionTypes'
 import { checkVictory } from '../helpers/resultHelper'
 
 export function checkResult(board) {
@@ -22,4 +22,8 @@ export function checkResult(board) {
       }
     }
   }
+}
+
+export function clearResult() {
+  return {type: CLEAR_RESULT}
 }

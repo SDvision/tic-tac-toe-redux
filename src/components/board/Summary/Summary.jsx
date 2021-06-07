@@ -30,6 +30,7 @@ function Summary(props) {
         </p>
         <p><strong>Player 1</strong>: {players.p1}</p>
         <p><strong>Player 2</strong>: {players.p2}</p>
+        {/* <button onClick={ clearStore({ board, players, result} ) }> RESET </button> */}
       </div>
     </div>
   )

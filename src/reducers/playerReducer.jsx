@@ -1,4 +1,4 @@
-import { PLAYER_X, TURN, PLAYER_O } from '../helpers/actionTypes'
+import { PLAYER_X, TURN, PLAYER_O, CLEAR_PLAYER } from '../helpers/actionTypes'
 
 const initialState = {
   p1: 'X',
@@ -44,6 +44,9 @@ export function playerReducer(state = initialState, action) {
       }
 
       return newState
+    
+      case CLEAR_PLAYER:
+        return initialState;
 
     default:
       return state

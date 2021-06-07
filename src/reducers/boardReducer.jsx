@@ -1,4 +1,4 @@
-import { DRAW_X, DRAW_O } from '../helpers/actionTypes'
+import { DRAW_X, DRAW_O, CLEAR_BOARD } from '../helpers/actionTypes'
 
 const initialState = [
   null, null, null,
@@ -17,6 +17,9 @@ export function boardReducer(state = initialState, action) {
       const newOState = [...state]
       newOState[action.cellIndex] = 'O'
       return newOState
+    
+     case CLEAR_BOARD:
+       return initialState 
 
     default:
       return state
