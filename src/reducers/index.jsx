@@ -9,3 +9,5 @@ export default combineReducers({
   players: playerReducer,
   result: resultReducer
 })
+
+//logic undo reset dispatch
