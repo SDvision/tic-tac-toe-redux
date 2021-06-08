@@ -18,7 +18,7 @@ export function boardReducer(state = initialState, action) {
       newOState[action.cellIndex] = 'O'
       return newOState
     
-     case CLEAR_BOARD:
+    case CLEAR_BOARD:
        return initialState 
 
     default:

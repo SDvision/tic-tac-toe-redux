@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
 
 import Cross from './cross/Cross.jsx'
@@ -10,15 +10,17 @@ function Square(props) {
   const { symbol, index, draw, players, board, toggleTurn } = props
 
   const disabled = symbol ? 'disabled' : ''
-
   return (
-    <div className={'cell ' + disabled} onClick={() => draw(board, players, index).then(() => { toggleTurn(); })}>
-      {symbol ? (symbol === 'X' ? <Cross /> : <Zero />) : ''}
-    </div >
+    <Fragment>
+      <div className={'cell ' + disabled} onClick={() => draw(board, players, index).then(() => { toggleTurn(); }) }>
+        {symbol ? (symbol === 'X' ? <Cross /> : <Zero />) : ''}
+      </div >
+    </Fragment>
   )
 }
 
-const mapStateToProps = ({ board, players }) => ({ board, players })
+const mapStateToProps = ({ board, players, result }) => ({ board, players, result })
+
 
 const mapDispatchToProps = dispatch => ({
   draw: (board, players, cellIndex) => {
@@ -29,7 +31,8 @@ const mapDispatchToProps = dispatch => ({
         return dispatch(drawOAction(cellIndex))
       }
     }
-  },
+  }
+  ,
   toggleTurn: () => dispatch(toggleTurnAction())
 })
 

@@ -1,4 +1,6 @@
 export function checkVictory(board, symbol) {
+
+  //FOR LOOP AND MOD
     if (board[0] === symbol && board[1] === symbol && board[2] === symbol) {
       return true
     }

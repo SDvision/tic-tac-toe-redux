@@ -6,6 +6,7 @@ import Square from './square/Square.jsx'
 import { clearBoard } from '../../actions/boardAction'
 import { clearPlayer } from '../../actions/playerActions.jsx'
 import { clearResult } from '../../actions/resultsAction.jsx'
+
 function Board(props) {
 
   const { board, clearAction } = props
@@ -19,12 +20,14 @@ function Board(props) {
       </div>
       <div>
         <button onClick={clearAction}> RESET </button>
-      </div>
+      </div>     
       <Summary />
 
     </Fragment>
   )
 }
+
+
 
 export default connect(
   ({ board }) => ({ board }),

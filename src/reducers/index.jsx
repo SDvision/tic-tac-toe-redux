@@ -2,12 +2,15 @@ import { combineReducers } from 'redux'
 
 import { boardReducer } from './boardReducer'
 import { playerReducer } from './playerReducer'
-import { resultReducer } from './resultReducer';
+import { resultReducer } from './resultReducer'
+
+
 
 export default combineReducers({
   board: boardReducer,
   players: playerReducer,
-  result: resultReducer
+  result: resultReducer,
+
 })
 
 //logic undo reset dispatch
