@@ -11,10 +11,10 @@ export function clearStates() {
     turn: 'p1'
     }
 
-    const initialState = {
+    const initialResult = {
         win: null,
         tie: false
     }
-    const initalState = {initialBoard, initialPlayer, initialState}
-    return initialState;
+    const initalState = {initialBoard, initialPlayer, initialResult}
+    return initalState;
 }
